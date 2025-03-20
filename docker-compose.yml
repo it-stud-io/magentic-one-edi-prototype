@@ -1,0 +1,21 @@
+name: autogen-magentic-one
+
+services:
+  app:
+    build: ./app
+    environment:
+      OPENAPI_API_KEY: sk-proj-xxx
+    volumes:
+      - data:/app/logs
+
+  api:
+    build: ./api
+    ports:
+      - 5000:5000
+    volumes:
+      - data:/api/logs
+    depends_on:
+      - app
+
+volumes:
+  data:

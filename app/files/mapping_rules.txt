@@ -1,0 +1,21 @@
+Direct Assignment:
+- usually used when source and target field have same semantic and syntax
+- visualize in the way <output field name> <- <input field name>
+- e.g. <customer number> <- <client no.>
+
+Fixed Value:
+- usually used when fields are set with a fixed value
+- vidualize in the way <output field name> <- "VALUE"
+- e.g. <warehouse id> <- "WH123"
+
+Lookup:
+- usually used when values are expressed as codes and need to be translated
+- uses a lookup table with schema <lookup field>, <value from>, <value to>
+- e.g. "country code", DE, Germany
+- visualize in the way <output field name> <- xref(<input field name>, <lookup field>)
+- e.g. <country> <- xref(<country-iso3>, <country code>)
+
+Custom:
+- usually used when source and target field have a common semantic, but different syntax
+- visualize using common known expression functions, such as <output field name> <- EXP(<input field name>)
+- e.g. <delivery date> <- DATE(<del date>, dd-mm-yyyy)

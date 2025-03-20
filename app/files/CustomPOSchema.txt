@@ -1,0 +1,18 @@
+name: MyCustomPOSchema
+type: EDI schema definition
+description: this file contains a custom schema definition for purchase order data.
+
+schema name: MyCustomPurchaseOrder
+record delimiter: CR LF
+field delimiter: |
+file format: text dynamic
+file encoding: UTF-8
+
+record POHead, occurance[min 1, max 99]
+    field POId, alphanumeric, 10
+    field POdate, datetime, [yyyymmdd:hhmmss]
+    field POCustomer, alphanumeric, 10
+    record POLine, occurance[min 1], 
+        field POLineId, numeric
+        field POItemNumber, alphanumeric, 10
+        field POQuantity, decimal

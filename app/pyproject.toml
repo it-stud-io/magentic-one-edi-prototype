@@ -1,0 +1,27 @@
+[project]
+name = "autogen_magnetic_one_it_stud_io"
+version = "0.0.1"
+authors = [
+  { name="Christian Mueller", email="christian.mueller@it-stud.io" },
+]
+description = "A prototype for an autogen magnetic one"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "autogen-core>=0.4.8",
+  "autogen-ext>=0.4.8",
+  "autogen-agentchat>=0.4.8",
+  "autogen-ext[openai]>=0.4.8",
+  "autogen-ext[magentic-one]>=0.4.8",
+  "markitdown==0.0.1",
+  "playwright>=1.50.0"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/it-stud-io/autogen-magnetic-one"
+Issues = "https://github.com/it-stud-io/autogen-magentic-one/issues"
